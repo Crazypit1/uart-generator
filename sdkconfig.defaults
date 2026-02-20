@@ -1,0 +1,8 @@
+# Отключаем Certificate Bundle mbedtls — убирает зависимость от x509_crt_bundle.S,
+# из-за которой в PlatformIO сборка ищет файл в неверном пути (mbedtls/.pio/...).
+# Для HTTPS с проверкой сертификатов можно включить обратно и поправить путь в платформе.
+# CONFIG_MBEDTLS_CERTIFICATE_BUNDLE is not set
+
+# Пока отключаем WDT (включить обратно при отладке завершённой).
+CONFIG_ESP_TASK_WDT_EN=n
+CONFIG_ESP_INT_WDT=n

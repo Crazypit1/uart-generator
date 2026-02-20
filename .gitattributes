@@ -1,0 +1,9 @@
+# Текстовые файлы — нормализация к LF (удобно для кроссплатформы и GitHub)
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Бинарники не трогать
+*.bin binary
+*.elf binary
+*.pyc binary
